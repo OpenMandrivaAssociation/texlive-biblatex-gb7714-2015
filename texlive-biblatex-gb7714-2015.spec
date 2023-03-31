@@ -1,6 +1,6 @@
 Name:		texlive-biblatex-gb7714-2015
 Version:	64967
-Release:	1
+Release:	2
 Summary:	A BibLaTeX implementation of the GBT7714-2015 bibliography style for Chinese users
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/biblatex-gb7714-2015
