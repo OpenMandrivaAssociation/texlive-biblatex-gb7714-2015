@@ -1,5 +1,5 @@
 Name:		texlive-biblatex-gb7714-2015
-Version:	68240
+Version:	69775
 Release:	1
 Summary:	A BibLaTeX implementation of the GBT7714-2015 bibliography style for Chinese users
 Group:		Publishing
