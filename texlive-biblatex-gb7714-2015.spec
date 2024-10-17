@@ -3,7 +3,7 @@ Version:	71329
 Release:	1
 Summary:	A BibLaTeX implementation of the GBT7714-2015 bibliography style for Chinese users
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/biblatex-gb7714-2015
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/biblatex-gb7714-2015
 License:	lppl1.3c
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-gb7714-2015.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-gb7714-2015.doc.r%{version}.tar.xz
