@@ -1,39 +1,27 @@
-Name:		texlive-biblatex-gb7714-2015
-Version:	71329
-Release:	1
-Summary:	A BibLaTeX implementation of the GBT7714-2015 bibliography style for Chinese users
+%global tl_name biblatex-gb7714-2015
+%global tl_revision 79337
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.1x
+Release:	%{tl_revision}.1
+Summary:	A BibLaTeX implementation of the GB/T 7714 series bibliography styles for Chi...
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/biblatex-gb7714-2015
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/biblatex-contrib/biblatex-gb7714-2015
 License:	lppl1.3c
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-gb7714-2015.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-gb7714-2015.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-gb7714-2015.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-gb7714-2015.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This package provides an implementation of the GBT7714-2015
-bibliography style. This implementation follows the
-GBT7714-2015 standard and can be used by simply loading
-BibLaTeX with the appropriate option. A demonstration database
-is provided to show how to format input for the style.
+This package provides the implementation of bibliography styles for the
+GB/T 7714 series standards, such as GB/T 7714-1987, GB/T 7714-2005, GB/T
+7714-2015, GB/T 7714-2025. The package also provides several liberal
+arts bibliography styles, such as chinese-erj, chinese-css, chinese-jmw,
+and so on. These styles can be used simply by loading BibLaTeX with the
+appropriate option.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/biblatex-gb7714-2015
-%doc %{_texmfdistdir}/doc/latex/biblatex-gb7714-2015
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
